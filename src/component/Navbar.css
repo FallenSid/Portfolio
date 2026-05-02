@@ -1,0 +1,67 @@
+.header{
+    background-color: black;
+    color:white;
+    display: flex;
+    position: fixed;
+}
+.logo{
+    display: flex;
+    gap: 10px;
+    width: 40vw;
+    padding: 16px;
+    margin-left: 5%;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.pages{
+    width: 60vw;
+    display: flex;
+    /* background-color: wheat; */
+}
+
+ul{
+    display: flex;
+    position: absolute;
+    right: 10%;
+    
+}
+ul li{
+    font-size: 1.1rem;
+    padding: 16px 30px;
+    list-style: none;
+    cursor: pointer;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:427px){
+     .logo p, .logo svg{
+        display: none;
+     }
+    ul li{
+       padding: 12px 12px ;
+       font-size: 0.8rem;
+    }
+    .header{
+        height: 5vh;
+
+    }
+}
+
+@media (min-width:427px) and (max-width:730px) {
+    .logo p, .logo svg{
+        display: none;
+     }
+      ul li{
+       padding: 12px 12px ;
+       font-size: 1.2rem;
+    }
+    .header{
+        height: 6vh;
+
+    }
+}
