@@ -129,7 +129,7 @@ function App() {
             </div>
             <div className="stats">
               <img id="stat-pic" src="./profile-pic.png" alt="" />
-              <h3 id="stat-heading" >Quick Stats</h3>
+              <h3 id="stat-heading">Quick Stats</h3>
               <div className="card">
                 <div className="icon">
                   <svg
@@ -150,7 +150,6 @@ function App() {
                   <h3>4+</h3>
                 </div>
               </div>
-
 
               <div className="card">
                 <div className="icon">
@@ -173,12 +172,9 @@ function App() {
                 </div>
                 <div>
                   <p>Technologies</p>
-                <h3>
-                  React, Node.js,  JS
-                </h3>
+                  <h3>React, Node.js, JS</h3>
                 </div>
               </div>
-
 
               <div className="card">
                 <div className="icon">
@@ -201,11 +197,8 @@ function App() {
                   </svg>
                 </div>
                 <div>
-
-                <p>Focus</p>
-                <h3>
-                Clean UI & Fast Delivery
-                </h3>
+                  <p>Focus</p>
+                  <h3>Clean UI & Fast Delivery</h3>
                 </div>
               </div>
               <div className="card">
@@ -226,19 +219,213 @@ function App() {
                   </svg>
                 </div>
                 <div>
-                  
-                <p>Approach</p>
-                <h3>Practical & Reliable Solutions</h3>
+                  <p>Approach</p>
+                  <h3>Practical & Reliable Solutions</h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <div className="page" id="projects">
           <div className="section projects-container">
-            <h1>projects</h1>
+            <h1>Projects</h1>
+            <div className="empty"></div>
+            <div className="empty"></div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <img
+                  className="pro-img"
+                  src="./portfolio.jpg"
+                  alt="project-image"
+                />
+              </div>
+              <div className="project-desc">
+                <div className="project-icon">
+                  <svg
+                    id="portfolio"
+                    width="28px"
+                    height="28px"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 1H5L8 3H13V5H3.7457L2.03141 11H4.11144L5.2543 7H16L14 14H0V1Z"
+                      fill="rgb(40, 79, 255)"
+                    ></path>
+                  </svg>
+                  <h3>Modern Developer Portfolio Website</h3>
+                </div>
+                <p>
+                  A clean and responsive portfolio template built to showcase
+                  projects, skills, and personal branding in a professional and
+                  engaging way.
+                </p>
+                <hr />
+                <div className="tools">
+                  <div className="tool port-color">React</div>
+                  <div className="tool port-color">CSS</div>
+                  <div className="tool port-color">Js</div>
+                </div>
+              </div>
+              <div className="project-button">
+                <button className="btn live-btn">Live Demo</button>
+                <button className="btn git-btn">Code</button>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <img
+                  className="pro-img"
+                  src="./ashvatha.jpg"
+                  alt="project-image"
+                />
+              </div>
+              <div className="project-desc">
+                <div className="project-icon">
+                  <svg
+                    id="ashvatha"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-swords-icon lucide-swords"
+                  >
+                    <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
+                    <line x1="13" x2="19" y1="19" y2="13" />
+                    <line x1="16" x2="20" y1="16" y2="20" />
+                    <line x1="19" x2="21" y1="21" y2="19" />
+                    <polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5" />
+                    <line x1="5" x2="9" y1="14" y2="18" />
+                    <line x1="7" x2="4" y1="17" y2="20" />
+                    <line x1="3" x2="5" y1="19" y2="21" />
+                  </svg>
+                  <h3>Ashvathha Web Novel Website</h3>
+                </div>
+                <p>
+                  A modern web platform designed to showcase the Ashvatha web
+                  novel with an organized structure for volumes and characters.
+                </p>
+                <hr />
+                <div className="tools">
+                  <div className="tool ashva-color">React</div>
+                  <div className="tool ashva-color">CSS</div>
+                  <div className="tool ashva-color">Js</div>
+                </div>
+              </div>
+              <div className="project-button">
+                <button className="btn live-btn">Live Demo</button>
+                <button className="btn git-btn">Code</button>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <img
+                  className="pro-img"
+                  src="./herbodent.jpg"
+                  alt="project-image"
+                />
+              </div>
+              <div className="project-desc">
+                <div className="project-icon">
+                  <svg
+                    id="herbodent"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="green"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-leaf-icon lucide-leaf"
+                  >
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                  </svg>
+                  <h3>Website for Herbal Toothpaste recommendation</h3>
+                </div>
+                <p>
+                  Suggests the best herbal toothpaste based on user symptoms for
+                  better oral care decisions.
+                </p>
+                <hr />
+                <div className="tools">
+                  <div className="tool herbo-color">React</div>
+                  <div className="tool herbo-color">CSS</div>
+                  <div className="tool herbo-color">Js</div>
+                </div>
+              </div>
+              <div className="project-button">
+                <button className="btn live-btn">Live Demo</button>
+                <button className="btn git-btn">Code</button>
+              </div>
+            </div>
+
+            <div className="project-card">
+              <div className="project-image">
+                <img
+                  className="pro-img"
+                  src="./birthday.jpg"
+                  alt="project-image"
+                />
+              </div>
+              <div className="project-desc">
+                <div className="project-icon">
+                  <svg
+                    id="birthday"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="red"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-cake-icon lucide-cake"
+                  >
+                    <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
+                    <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" />
+                    <path d="M2 21h20" />
+                    <path d="M7 8v3" />
+                    <path d="M12 8v3" />
+                    <path d="M17 8v3" />
+                    <path d="M7 4h.01" />
+                    <path d="M12 4h.01" />
+                    <path d="M17 4h.01" />
+                  </svg>
+                  <h3>Personalized Birthday Website</h3>
+                </div>
+                <p>
+                  A customizable website designed to create and share memorable
+                  birthday experiences with messages, and interactive elements.
+                </p>
+                <hr />
+                <div className="tools">
+                  <div className="tool birth-color">React</div>
+                  <div className="tool birth-color">CSS</div>
+                  <div className="tool birth-color">Js</div>
+                </div>
+              </div>
+              <div className="project-button">
+                <button className="btn live-btn">Live Demo</button>
+                <button className="btn git-btn">Code</button>
+              </div>
+            </div>
           </div>
         </div>
+
         <div className="page" id="contact">
           <div className="section contact-container">
             <h1>contacts</h1>
