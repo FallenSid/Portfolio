@@ -66,3 +66,11 @@
     background-color: blue;
     scale: 1.03;
 }
+
+@media (max-width: 576px){
+    .form-contact{
+    width: 95%;
+    margin: 0;
+  }
+  
+}
