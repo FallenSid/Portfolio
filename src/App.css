@@ -183,6 +183,10 @@
   transition: all 0.2s;
 }
 .live-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   background-color: rgb(40, 79, 255);
   color: white;
 }
@@ -192,7 +196,12 @@
 }
 
 .git-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border: 2px solid gray;
+  color: black;
 }
 .git-btn:hover {
   border: 2px solid black;
@@ -449,10 +458,6 @@
 
 
 
-
-  #contact{
-    /* display: none; */
-  }
   .contact-container{
     display: flex;
     flex-direction: column;
@@ -462,8 +467,8 @@
     width: 95%;
   }
   #contact h1{
-    font-size: 2rem;
-    margin-left: -20%;
+    font-size: 2.3rem;
+    margin-left: -30%;
   }
 
   

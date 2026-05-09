@@ -272,8 +272,10 @@ function App() {
                 </div>
               </div>
               <div className="project-button">
-                <button className="btn live-btn">Live Demo</button>
-                <button className="btn git-btn">Code</button>
+                {/* <button className="btn live-btn">Live Demo</button> */}
+                <a className="btn live-btn" href="https://fallensidportfolio.vercel.app/">Live Demo</a>
+                <a className="btn git-btn" href="https://github.com/FallenSid/Portfolio">Code</a>
+                {/* <button className="btn git-btn">Code</button> */}
               </div>
             </div>
 
@@ -323,8 +325,10 @@ function App() {
                 </div>
               </div>
               <div className="project-button">
-                <button className="btn live-btn">Live Demo</button>
-                <button className="btn git-btn">Code</button>
+                {/* <button className="btn live-btn">Live Demo</button> */}
+                {/* <button className="btn git-btn">Code</button> */}
+                <a className="btn live-btn" href="https://the-ashvathha.vercel.app/">Live Demo</a>
+                <a className="btn git-btn" href="https://github.com/FallenSid/Ashvatha-NodeJs-">Code</a>
               </div>
             </div>
 
@@ -368,8 +372,10 @@ function App() {
                 </div>
               </div>
               <div className="project-button">
-                <button className="btn live-btn">Live Demo</button>
-                <button className="btn git-btn">Code</button>
+                {/* <button className="btn live-btn">Live Demo</button> */}
+                {/* <button className="btn git-btn">Code</button> */}
+                <a className="btn live-btn" href="https://herbo-dent.vercel.app/">Live Demo</a>
+                <a className="btn git-btn" href="https://github.com/FallenSid/HerboDent">Code</a>
               </div>
             </div>
 
@@ -420,8 +426,10 @@ function App() {
                 </div>
               </div>
               <div className="project-button">
-                <button className="btn live-btn">Live Demo</button>
-                <button className="btn git-btn">Code</button>
+                {/* <button className="btn live-btn">Live Demo</button> */}
+                {/* <button className="btn git-btn">Code</button> */}
+                <a className="btn live-btn" href="https://birthday-website-for-mehak.vercel.app/">Live Demo</a>
+                <a className="btn git-btn" href="https://github.com/FallenSid/Birthday-website-temp">Code</a>
               </div>
             </div>
           </div>
@@ -448,13 +456,11 @@ function App() {
                 </div>
                 <div className="email contact-link">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-                <a href="mailto:yourmail@gmail.com">Send Email</a>
+                <a href="mailto:gauravgautam61259@gmail.com">Send Email</a>
                 </div>
               </div>
             </div>
-            <div >
               <Contact/>
-            </div>
           </div>
         </div>
       </div>

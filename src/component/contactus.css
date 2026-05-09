@@ -69,8 +69,12 @@
 
 @media (max-width: 576px){
     .form-contact{
-    width: 95%;
-    margin: 0;
+        overflow: auto;
+        width: 80vw;
+        margin: 0px;
+    /* width: 100%; */
+    /* padding: auto; */
+    /* margin: 0; */
   }
   
 }
