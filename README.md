@@ -1,16 +1,99 @@
-# React + Vite
+# 🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive developer portfolio built to showcase my projects, skills, and professional journey. Designed with a clean UI, smooth animations, and a focus on user experience.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Responsive design for all devices
+* Modern and clean user interface
+* Project showcase section
+* About Me section
+* Skills & Technologies section
+* Contact form integration
+* Smooth scrolling and animations
+* Fast loading performance
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
 
-## Expanding the ESLint configuration
+* HTML5
+* CSS3
+* JavaScript
+* React.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Styling
+
+* Tailwind CSS
+
+### Additional Tools
+
+* EmailJS (Contact Form)
+* Git & GitHub
+
+## 📂 Project Structure
+
+```bash
+portfolio/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── styles/
+│   └── App.jsx
+├── package.json
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/FalenSid/portfolio.git
+```
+
+### Navigate to the Project
+
+```bash
+cd portfolio
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```bash
+http://localhost:5173
+```
+
+## 📸 Portfolio Sections
+
+* Hero Section
+* About Me
+* Skills
+* Projects
+* Contact
+
+## 📬 Contact
+
+If you'd like to collaborate, discuss opportunities, or simply connect:
+
+* Email: [gautamgaurav849@gmail.com](mailto:gautamgaurav849@gmail.com)
+* Portfolio: https://fallensidportfolio.vercel.app
+
+## 🤝 Contributing
+
+Suggestions and feedback are always welcome. Feel free to fork the repository and create a pull request.
+
+⭐ If you like this project, consider giving it a star on GitHub.
