@@ -30,7 +30,7 @@ function App() {
         <div className="page" id="about">
           <div className="section about-container">
             <div className="about-text">
-              <h1>About Me</h1>
+              <h1 className="heading-line" >About Me</h1>
               <div className="heading">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -230,9 +230,9 @@ function App() {
 
         <div className="page" id="projects">
           <div className="section projects-container">
-            <h1>Projects</h1>
-            <div className="empty"></div>
-            <div className="empty"></div>
+            <h1 className="heading-line">Projects</h1>
+            <div id="emp-1" className="empty"></div>
+            <div id="epm-2" className="empty"></div>
 
             <div className="project-card">
               <div className="project-image">
@@ -436,7 +436,7 @@ function App() {
         </div>
 
         <div className="page" id="contact">
-          <h1 id="Contact-heading">Contact</h1>
+          <h1 id="Contact-heading" className="heading-line" >Contact</h1>
           <div className="section contact-container">
             <div className="main-contact">
               <h4>GET IN TOUCH</h4> <br />
