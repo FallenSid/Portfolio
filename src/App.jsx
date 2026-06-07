@@ -27,8 +27,8 @@ function App() {
             </h2>
           </div>
         </div>
-        <div className="page" id="about">
-          <div className="section about-container">
+        <div className="" id="about">
+          <div className="section about-container page">
             <div className="about-text">
               <h1 className="heading-line" >About Me</h1>
               <div className="heading">
@@ -228,11 +228,11 @@ function App() {
           </div>
         </div>
 
-        <div className="page" id="projects">
-          <div className="section projects-container">
+        <div className="" id="projects">
             <h1 className="heading-line">Projects</h1>
-            <div id="emp-1" className="empty"></div>
-            <div id="epm-2" className="empty"></div>
+          <div className="section projects-container page">
+            {/* <div id="emp-1" className="empty"></div> */}
+            {/* <div id="epm-2" className="empty"></div> */}
 
             <div className="project-card">
               <div className="project-image">
@@ -435,10 +435,10 @@ function App() {
           </div>
         </div>
 
-        <div className="page" id="contact">
-          <h1 id="Contact-heading" className="heading-line" >Contact</h1>
-          <div className="section contact-container">
+        <div id="contact">
+          <div className="section contact-container page">
             <div className="main-contact">
+          <h1 id="Contact-heading" className="heading-line" >Contact</h1>
               <h4>GET IN TOUCH</h4> <br />
               <h2>Let's Work Together</h2> <br />
               <p>Have a project in mind or just want to say hey?</p>

@@ -1,3 +1,7 @@
+*{margin: 0;}
+root{
+  margin: 0;
+}
 #bg {
   position: fixed;
   width: 100vw;
@@ -42,8 +46,14 @@
 }
 
 .page {
-  padding-top: 10vh;
-  padding: 40px 20px;
+  /* padding-top: 10vh; */
+  /* padding: 40px 20px; */
+  margin: auto;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
 }
 
 .page h1 {
@@ -91,6 +101,7 @@
 .stats {
   width: 30vw;
   height: 80vh;
+  max-height: 600px;
   background-color: white;
   box-shadow: 0 0 10px black;
   border-radius: 25px;
@@ -134,8 +145,9 @@
 }
 
 .project-card {
-  width: 400px;
+  max-width: 450px;
   height: 70vh;
+  max-height: 650px;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.495);
   border-radius: 20px;
@@ -237,7 +249,7 @@
   background-color: rgba(172, 255, 47, 0.514);
   color: green;
   min-width: 20%;
-  padding: 10px ;
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -283,8 +295,12 @@
   color: red;
 }
 
-#Contact-heading {
-  padding-left: 140px;
+.heading-line{
+  /* height: 100%; */
+  min-height: 100px;
+  padding-left: 50px;
+  padding-top: 50px;
+  font-size:3rem;
 }
 
 .main-contact {
@@ -341,13 +357,21 @@
   fill: white;
 }
 
+.form-contact{
+  max-width: 400px;
+  max-height: 600px;
+}
+
 .contact-link:hover {
   scale: 1.03;
 }
 
+.form-contact .contact-title{
+  width: 80%;
+}
+
 @media (max-width: 576px) {
   #bg {
-    /* position: fixed; */
     height: 102vh;
     width: 102vw;
     object-fit: cover;
@@ -396,7 +420,6 @@
     height: 70vh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
     max-width: 350px;
-    /* margin-top: 10%; */
   }
   .card {
     width: 90%;
@@ -419,7 +442,6 @@
   }
 
   #projects .projects-container {
-    /* display: none; */
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -442,7 +464,6 @@
     height: 200px;
   }
 
-
   .project-button {
     min-height: 65px;
   }
@@ -457,15 +478,18 @@
   }
   .main-contact {
     width: 95%;
+    height: 100%;
+    min-height: 600px;
   }
-  #contact h1 {
+  /* #contact h1 {
     font-size: 2.3rem;
     margin-left: -30%;
-  }
+  } */
+  .form-contact(scale: 0.8;)
 }
 
-@media (max-width: 768px) and (min-width: 577px) {
-  .container{
+@media (min-width: 577px) and ( max-width:768px ){
+  .container {
     margin: 0;
   }
   .profile {
@@ -476,121 +500,114 @@
     width: 200px;
     height: 200px;
   }
-  #bg{
+  #bg {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
   }
 
-  .stats{
+  .stats {
     width: 45%;
   }
-  .stats h3{
+  .stats h3 {
     font-size: 1rem;
   }
 
-  .contact-title{
-    padding: 20px 0px;
-    margin-left: 10px;
+  .contact-title {
+    width: 400px;
+    /* padding: 20px 0px; */
+    /* margin-left: 10px; */
   }
 
   .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
   }
-  .tools{
+  .tools {
     margin-top: 10px;
   }
-  .project-card{
+  .project-card {
     height: auto;
     width: 42vw;
     margin: 0;
   }
-  #emp-1{
+  #emp-1 {
     display: none;
   }
-  .project-button{
+  .project-button {
     height: 10vh;
   }
-  .btn{
+  .btn {
     height: 40px;
   }
 }
 
-@media (max-width:992px) and (min-width:769px){
-  .page{
+@media (min-width: 769px) and ( max-width:992px ){
+  .page {
     padding: 0;
   }
-  #profile-pic{
+  #profile-pic {
     scale: 0.8;
   }
   .projects-container {
     width: 95vw;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
     margin: 0;
   }
-  .project-card{
+  .project-card {
     width: 300px;
     height: auto;
     scale: 0.8;
   }
 
-
-  .project-button{
+  .project-button {
     height: 10vh;
   }
-  .btn{
+  .btn {
     height: 40px;
   }
 
-  .tools{
+  .tools {
     margin-top: 10px;
   }
 }
 
-@media (max-width:1200px) and (min-width:993px){
-
-  .page{
+@media (min-width: 993px) and ( max-width:1200px ){
+  .page {
     padding: 0;
   }
-  #profile-pic{
+  #profile-pic {
     scale: 0.8;
   }
   .projects-container {
     width: 95vw;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
   }
-  .project-card{
+  .project-card {
     width: auto;
     height: auto;
     scale: 0.9;
-    margin:0;
+    margin: 0;
   }
 
-
-  .project-button{
+  .project-button {
     height: 10vh;
   }
-  .btn{
+  .btn {
     height: 40px;
   }
 
-  .tools{
+  .tools {
     margin-top: 10px;
   }
 
-  .contact-title{
-    width:80%;
-    padding: 20px 10px
+  .contact-title {
+    width: 80%;
+    padding: 20px 10px;
   }
 }
 
-
-.heading-line{
-  overflow: auto;
-}
