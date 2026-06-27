@@ -255,11 +255,16 @@ root{
   justify-content: center;
 }
 .projects-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 90vw;
   gap: 40px;
-  margin: 0 auto;
+  margin: 0 auto; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-card{
+  margin-top: 30px;
 }
 
 .projects-container h1 {
@@ -368,6 +373,17 @@ root{
 
 .form-contact .contact-title{
   width: 80%;
+}
+
+#gym-temp{
+  background-color: rgba(0, 0, 0, 0.742);
+  scale: 0.8;
+  padding: 10px;
+  border-radius: 50%;
+}
+#gym-card .tool{
+  background-color: rgba(58, 58, 58, 0.888);
+  color: gold;
 }
 
 @media (max-width: 576px) {
@@ -517,11 +533,16 @@ root{
     /* padding: 20px 0px; */
     /* margin-left: 10px; */
   }
-
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
+.projects-container {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90vw;
+  gap: 40px;
+  margin: 0 auto; */
+  display: flex;
+  flex-wrap: wrap;
+}
   .tools {
     margin-top: 10px;
   }
@@ -529,6 +550,7 @@ root{
     height: auto;
     width: 42vw;
     margin: 0;
+    margin-top: 30px;
   }
   #emp-1 {
     display: none;
@@ -550,15 +572,14 @@ root{
   }
   .projects-container {
     width: 95vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
   .project-card {
-    width: 300px;
+    width: 400px;
     height: auto;
     scale: 0.8;
+    margin-top: 30px;
   }
 
   .project-button {
@@ -582,9 +603,8 @@ root{
   }
   .projects-container {
     width: 95vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
+   display: flex;
+   flex-wrap: wrap;
   }
   .project-card {
     width: auto;
