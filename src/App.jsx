@@ -2,6 +2,53 @@ import "./App.css";
 import Navbar from "./component/Navbar.jsx";
 import Contact from './component/ContactUs.jsx'
 function App() {
+  const projectsData = [
+    {
+      id: "gym-card",
+      title: "Apex Gym & Fitness Website Template",
+      desc: "A sleek and high-performance website template, specifically designed to showcase gym facilities, programs, testimonials, plans and contacts.",
+      imgSrc: "./gym-temp.jpg",
+      tools: ["React", "CSS", "Js"],
+      colorClass: "port-color",
+      liveLink: "https://fallensidportfolio.vercel.app/",
+      gitLink: "https://github.com/FallenSid/Portfolio",
+      // To keep the code perfectly clean, consider using a library like lucide-react instead of raw SVGs!
+      icon: "🏋️" // Replaced raw SVG with emoji for brevity in this example, but you can pass the SVG component here.
+    },
+    {
+      id: "portfolio-card",
+      title: "Modern Developer Portfolio Website",
+      desc: "A clean and responsive portfolio template built to showcase projects, skills, and personal branding in a professional and engaging way.",
+      imgSrc: "./portfolio.jpg",
+      tools: ["React", "CSS", "Js"],
+      colorClass: "port-color",
+      liveLink: "https://fallensidportfolio.vercel.app/",
+      gitLink: "https://github.com/FallenSid/Portfolio",
+      icon: "💻"
+    },
+    {
+      id: "ashvathha-card",
+      title: "Ashvathha Web Novel Website",
+      desc: "A modern web platform designed to showcase the Ashvatha web novel with an organized structure for volumes and characters.",
+      imgSrc: "./ashvatha.jpg",
+      tools: ["React", "CSS", "Js"],
+      colorClass: "ashva-color",
+      liveLink: "https://the-ashvathha.vercel.app/",
+      gitLink: "https://github.com/FallenSid/Ashvatha-NodeJs-",
+      icon: "⚔️"
+    },
+    {
+      id: "herbodent-card",
+      title: "Website for Herbal Toothpaste recommendation",
+      desc: "Suggests the best herbal toothpaste based on user symptoms for better oral care decisions.",
+      imgSrc: "./herbodent.jpg",
+      tools: ["React", "CSS", "Js"],
+      colorClass: "herbo-color",
+      liveLink: "https://herbo-dent.vercel.app/",
+      gitLink: "https://github.com/FallenSid/HerboDent",
+      icon: "🌿"
+    }
+  ];
   return (
     <div className="container">
       <img id="bg" src="./bg.jpg" alt="background-image" />
@@ -19,13 +66,34 @@ function App() {
             <h2>Hey There,</h2>
             <h1>I’m Gaurav Gautam (FallenSid)</h1>
             <h1>
-              I build <span>modern websites</span> that help{" "}
-              <span>businesses</span> attract more <span>customers</span>.
+              I build <span>modern web applications</span> and
+              <span> AI-powered solutions</span>.
             </h1>
+
             <h2>
-              Fast, responsive, and designed to turn visitors into real clients.
+              Pharmacy Student • Full Stack Developer • Problem Solver
             </h2>
+
+            <p>
+              Passionate about creating clean, responsive websites and healthcare
+              solutions that make a real impact.
+            </p>
+            <div className="hero-buttons">
+              <a href="#projects" className="primary-btn">
+                View Projects
+              </a>
+
+              <a href="/resume.pdf" className="secondary-btn">
+                Download Resume
+              </a>
+            </div>
+            <div className="hero-socials">
+              <a href="https://github.com/FallenSid" target="_blank"><svg fill="#000000" width="50px" height="50px" viewBox="0 -0.5 25 25" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z"></path></g></svg></a>
+              <a href="#"><svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="#0F0F0F"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="#0F0F0F"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="#0F0F0F"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="#0F0F0F"></path> </g></svg></a>
+              <a href="mailto:gauravgautam61259@gmail.com"><svg fill="#000000" width="50px" height="650x" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>gmail</title> <path d="M30.996 7.824v17.381c0 0 0 0 0 0.001 0 1.129-0.915 2.044-2.044 2.044-0 0-0 0-0.001 0h-4.772v-11.587l-8.179 6.136-8.179-6.136v11.588h-4.772c0 0 0 0-0 0-1.129 0-2.044-0.915-2.044-2.044 0-0 0-0.001 0-0.001v0-17.381c0-0 0-0.001 0-0.001 0-1.694 1.373-3.067 3.067-3.067 0.694 0 1.334 0.231 1.848 0.619l-0.008-0.006 10.088 7.567 10.088-7.567c0.506-0.383 1.146-0.613 1.84-0.613 1.694 0 3.067 1.373 3.067 3.067v0z"></path> </g></svg></a>
+            </div>
           </div>
+
         </div>
         <div className="" id="about">
           <div className="section about-container page">
@@ -227,242 +295,40 @@ function App() {
             </div>
           </div>
         </div>
-
-        <div className="" id="projects">
+        <div id="projects">
           <h1 className="heading-line">Projects</h1>
           <div className="section projects-container page">
+            {projectsData.map((project) => (
+              <div className="project-card" id={project.id} key={project.id}>
 
-            <div className="project-card" id="gym-card">
-              <div className="project-image">
-                <img
-                  className="pro-img"
-                  src="./gym-temp.jpg"
-                  alt="project-image"
-                />
-              </div>
-              <div className="project-desc">
-                <div className="project-icon">
-                  <svg id="gym-temp" fill="gold" width="35px" height="35px" viewBox="0 0 50 50" version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" overflow="inherit" stroke="#ffdd00"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M17.962 44.874c.374.403.352 1.041-.05 1.416l-2.172 2.031c-.402.375-1.037.353-1.411-.051l-12.649-13.632c-.374-.403-.351-1.04.051-1.416l2.175-2.028c.402-.376 1.037-.353 1.411.051l12.645 13.629zm16.14-25.65c.374.403.351 1.041-.051 1.416l-13.67 12.77c-.402.375-1.037.353-1.411-.051l-3.263-3.521c-.374-.403-.351-1.041.051-1.416l13.667-12.77c.401-.375 1.036-.353 1.41.051l3.267 3.521zm-11.489 21.303c.374.403.351 1.04-.051 1.416l-2.175 2.03c-.402.376-1.037.353-1.411-.051l-12.642-13.632c-.374-.403-.352-1.041.05-1.416l2.171-2.029c.402-.375 1.037-.353 1.411.051l12.647 13.631zm21.063-20.814c.374.403.351 1.041-.052 1.416l-2.174 2.03c-.402.375-1.037.353-1.412-.05l-12.644-13.629c-.375-.403-.352-1.04.05-1.416l2.18-2.035c.401-.375 1.036-.353 1.41.051l12.642 13.633zm4.644-4.34c.374.403.351 1.041-.051 1.417l-2.17 2.029c-.401.376-1.036.353-1.41-.05l-12.642-13.635c-.374-.403-.352-1.041.05-1.417l2.172-2.033c.401-.376 1.035-.354 1.409.05l12.642 13.639z"></path></g></svg>
-                  <h3>Apex Gym & Fitness  Website Template</h3>
+                <div className="project-image">
+                  <img className="pro-img" src={project.imgSrc} alt={`${project.title} screenshot`} />
                 </div>
-                <p>
-                 A sleek and high-performance website template,specifically designed to showcase gym facilities, programs , testimonials, plans and contacts.
-                </p>
-                <hr />
-                <div className="tools">
-                  <div className="tool port-color">React</div>
-                  <div className="tool port-color">CSS</div>
-                  <div className="tool port-color">Js</div>
-                </div>
-              </div>
-              <div className="project-button">
-                {/* <button className="btn live-btn">Live Demo</button> */}
-                <a className="btn live-btn" href="https://fallensidportfolio.vercel.app/">Live Demo</a>
-                <a className="btn git-btn" href="https://github.com/FallenSid/Portfolio">Code</a>
-                {/* <button className="btn git-btn">Code</button> */}
-              </div>
-            </div>
-            <div className="project-card">
-              <div className="project-image">
-                <img
-                  className="pro-img"
-                  src="./portfolio.jpg"
-                  alt="project-image"
-                />
-              </div>
-              <div className="project-desc">
-                <div className="project-icon">
-                  <svg
-                    id="portfolio"
-                    width="28px"
-                    height="28px"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 1H5L8 3H13V5H3.7457L2.03141 11H4.11144L5.2543 7H16L14 14H0V1Z"
-                      fill="rgb(40, 79, 255)"
-                    ></path>
-                  </svg>
-                  <h3>Modern Developer Portfolio Website</h3>
-                </div>
-                <p>
-                  A clean and responsive portfolio template built to showcase
-                  projects, skills, and personal branding in a professional and
-                  engaging way.
-                </p>
-                <hr />
-                <div className="tools">
-                  <div className="tool port-color">React</div>
-                  <div className="tool port-color">CSS</div>
-                  <div className="tool port-color">Js</div>
-                </div>
-              </div>
-              <div className="project-button">
-                {/* <button className="btn live-btn">Live Demo</button> */}
-                <a className="btn live-btn" href="https://fallensidportfolio.vercel.app/">Live Demo</a>
-                <a className="btn git-btn" href="https://github.com/FallenSid/Portfolio">Code</a>
-                {/* <button className="btn git-btn">Code</button> */}
-              </div>
-            </div>
 
-            <div className="project-card">
-              <div className="project-image">
-                <img
-                  className="pro-img"
-                  src="./ashvatha.jpg"
-                  alt="project-image"
-                />
-              </div>
-              <div className="project-desc">
-                <div className="project-icon">
-                  <svg
-                    id="ashvatha"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-swords-icon lucide-swords"
-                  >
-                    <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
-                    <line x1="13" x2="19" y1="19" y2="13" />
-                    <line x1="16" x2="20" y1="16" y2="20" />
-                    <line x1="19" x2="21" y1="21" y2="19" />
-                    <polyline points="14.5 6.5 18 3 21 3 21 6 17.5 9.5" />
-                    <line x1="5" x2="9" y1="14" y2="18" />
-                    <line x1="7" x2="4" y1="17" y2="20" />
-                    <line x1="3" x2="5" y1="19" y2="21" />
-                  </svg>
-                  <h3>Ashvathha Web Novel Website</h3>
-                </div>
-                <p>
-                  A modern web platform designed to showcase the Ashvatha web
-                  novel with an organized structure for volumes and characters.
-                </p>
-                <hr />
-                <div className="tools">
-                  <div className="tool ashva-color">React</div>
-                  <div className="tool ashva-color">CSS</div>
-                  <div className="tool ashva-color">Js</div>
-                </div>
-              </div>
-              <div className="project-button">
-                {/* <button className="btn live-btn">Live Demo</button> */}
-                {/* <button className="btn git-btn">Code</button> */}
-                <a className="btn live-btn" href="https://the-ashvathha.vercel.app/">Live Demo</a>
-                <a className="btn git-btn" href="https://github.com/FallenSid/Ashvatha-NodeJs-">Code</a>
-              </div>
-            </div>
+                <div className="project-desc">
+                  <div className="project-icon">
+                    <span style={{ fontSize: '28px' }}>{project.icon}</span>
+                    <h3>{project.title}</h3>
+                  </div>
+                  <p>{project.desc}</p>
+                  <hr />
 
-            <div className="project-card">
-              <div className="project-image">
-                <img
-                  className="pro-img"
-                  src="./herbodent.jpg"
-                  alt="project-image"
-                />
-              </div>
-              <div className="project-desc">
-                <div className="project-icon">
-                  <svg
-                    id="herbodent"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="green"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-leaf-icon lucide-leaf"
-                  >
-                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                  </svg>
-                  <h3>Website for Herbal Toothpaste recommendation</h3>
+                  <div className="tools">
+                    {project.tools.map((tool, index) => (
+                      <div key={index} className={`tool ${project.colorClass}`}>{tool}</div>
+                    ))}
+                  </div>
                 </div>
-                <p>
-                  Suggests the best herbal toothpaste based on user symptoms for
-                  better oral care decisions.
-                </p>
-                <hr />
-                <div className="tools">
-                  <div className="tool herbo-color">React</div>
-                  <div className="tool herbo-color">CSS</div>
-                  <div className="tool herbo-color">Js</div>
-                </div>
-              </div>
-              <div className="project-button">
-                {/* <button className="btn live-btn">Live Demo</button> */}
-                {/* <button className="btn git-btn">Code</button> */}
-                <a className="btn live-btn" href="https://herbo-dent.vercel.app/">Live Demo</a>
-                <a className="btn git-btn" href="https://github.com/FallenSid/HerboDent">Code</a>
-              </div>
-            </div>
 
-            <div className="project-card">
-              <div className="project-image">
-                <img
-                  className="pro-img"
-                  src="./birthday.jpg"
-                  alt="project-image"
-                />
-              </div>
-              <div className="project-desc">
-                <div className="project-icon">
-                  <svg
-                    id="birthday"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="red"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-cake-icon lucide-cake"
-                  >
-                    <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
-                    <path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" />
-                    <path d="M2 21h20" />
-                    <path d="M7 8v3" />
-                    <path d="M12 8v3" />
-                    <path d="M17 8v3" />
-                    <path d="M7 4h.01" />
-                    <path d="M12 4h.01" />
-                    <path d="M17 4h.01" />
-                  </svg>
-                  <h3>Personalized Birthday Website</h3>
+                <div className="project-button">
+                  <a className="btn live-btn" href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                  <a className="btn git-btn" href={project.gitLink} target="_blank" rel="noopener noreferrer">Code</a>
                 </div>
-                <p>
-                  A customizable website designed to create and share memorable
-                  birthday experiences with messages, and interactive elements.
-                </p>
-                <hr />
-                <div className="tools">
-                  <div className="tool birth-color">React</div>
-                  <div className="tool birth-color">CSS</div>
-                  <div className="tool birth-color">Js</div>
-                </div>
+
               </div>
-              <div className="project-button">
-                {/* <button className="btn live-btn">Live Demo</button> */}
-                {/* <button className="btn git-btn">Code</button> */}
-                <a className="btn live-btn" href="https://birthday-website-for-mehak.vercel.app/">Live Demo</a>
-                <a className="btn git-btn" href="https://github.com/FallenSid/Birthday-website-temp">Code</a>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-
         <div id="contact">
           <div className="section contact-container page">
             <div className="main-contact">
