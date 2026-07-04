@@ -1,7 +1,28 @@
 import "./App.css";
 import Navbar from "./component/Navbar.jsx";
 import Contact from './component/ContactUs.jsx'
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 function App() {
+  import { useEffect } from "react";
+
+useEffect(() => {
+  gsap.from(".skill-category", {
+    y: 80,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+
+    scrollTrigger: {
+      trigger: "#skills",
+      start: "top 70%",
+      toggleActions: "play none none reverse"
+    }
+  });
+}, []);
+
   const projectsData = [
     {
       id: "gym-card",
@@ -49,6 +70,44 @@ function App() {
       icon: "🌿"
     }
   ];
+
+  const skills = [
+    {
+      title: "Frontend",
+      skills: [
+        "React",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Responsive Design"
+      ]
+    },
+    {
+      title: "Backend",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "REST APIs"
+      ]
+    },
+    {
+      title: "Programming",
+      skills: [
+        "JavaScript",
+        "Python"
+      ]
+    },
+    {
+      title: "Tools",
+      skills: [
+        "Git",
+        "GitHub",
+        "Vercel",
+        "Render",
+        "Firebase"
+      ]
+    }
+  ];
   return (
     <div className="container">
       <img id="bg" src="./bg.jpg" alt="background-image" />
@@ -83,7 +142,7 @@ function App() {
                 View Projects
               </a>
 
-              <a href="/resume.pdf" className="secondary-btn">
+              <a href="/GauravGautam.pdf" className="secondary-btn">
                 Download Resume
               </a>
             </div>
@@ -295,6 +354,27 @@ function App() {
             </div>
           </div>
         </div>
+
+        <div id="skills">
+          <h1 className="heading-line">Skills</h1>
+
+          <div className="skills-container page">
+            {skills.map((category) => (
+              <div className="skill-category" key={category.title}>
+                <h2>{category.title}</h2>
+
+                <div className="skill-tags">
+                  {category.skills.map((skill) => (
+                    <div className="skill-tag" key={skill}>
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div id="projects">
           <h1 className="heading-line">Projects</h1>
           <div className="section projects-container page">

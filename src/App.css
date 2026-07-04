@@ -456,6 +456,78 @@
   color: gold;
 }
 
+
+.skills-container {
+  width: 95vw;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.skill-category {
+  width: 320px;
+  min-height: 250px;
+
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+
+  box-shadow: var(--shadow-sm);
+
+  transition: .3s;
+}
+
+.skill-category:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-category h2 {
+  margin-bottom: 25px;
+  color: var(--primary);
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill-tag {
+  background: #eaf3ff;
+  color: var(--primary);
+
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+
+  transition: .3s;
+}
+
+.skill-tag:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.project-card{
+  transition: .4s;
+}
+
+.project-card:hover{
+  transform: translateY(-15px);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+.pro-img{
+  transition:.4s;
+}
+
+.project-card:hover .pro-img{
+  transform:scale(1.05);
+}
+
 @media (max-width: 576px) {
   #bg {
     height: 102vh;
