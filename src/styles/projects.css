@@ -1,0 +1,174 @@
+.projects-container {
+  width: var(--section-width);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 36px;
+}
+
+.project-card {
+  width: min(100%, 450px);
+  max-width: 450px;
+  min-height: 0;
+  height: auto;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background-color: var(--white);
+  box-shadow: var(--shadow-strong);
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.pro-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  transition: 0.4s;
+}
+
+.project-card:hover .pro-img {
+  transform: scale(1.05);
+}
+
+.project-desc {
+  width: 100%;
+  min-height: 0;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-icon {
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.project-icon span {
+  flex: 0 0 auto;
+}
+
+.project-icon h3 {
+  width: auto;
+  min-width: 0;
+  flex: 1;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.project-desc p {
+  padding: 0;
+  color: var(--text-body);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.tools {
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.tool {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(172, 255, 47, 0.514);
+  color: green;
+  line-height: 1;
+}
+
+.port-color {
+  background-color: var(--primary-soft);
+  color: rgb(0, 32, 175);
+}
+
+.ashva-color {
+  background-color: rgba(128, 128, 128, 0.5);
+  color: var(--white);
+}
+
+.herbo-color {
+  background-color: rgba(172, 255, 47, 0.514);
+  color: green;
+}
+
+#gym-card .tool {
+  background-color: rgba(58, 58, 58, 0.888);
+  color: gold;
+}
+
+.project-button {
+  width: 100%;
+  min-height: 46px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.btn {
+  width: 40%;
+  min-height: 44px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--white);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.live-btn {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.live-btn:hover {
+  background-color: var(--primary-dark);
+  scale: 1.02;
+}
+
+.git-btn {
+  border: 2px solid gray;
+  color: var(--black);
+}
+
+.git-btn:hover {
+  border-color: var(--black);
+  scale: 1.02;
+}

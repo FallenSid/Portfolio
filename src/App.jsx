@@ -1,27 +1,87 @@
 import "./App.css";
+import { useEffect } from "react";
 import Navbar from "./component/Navbar.jsx";
 import Contact from './component/ContactUs.jsx'
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Mail, MessageCircle, Phone, MapPin } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
-  import { useEffect } from "react";
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".scroll-reveal",
+        { y: 70, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.85,
+          ease: "power3.out",
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: "#home",
+            start: "top 80%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
 
-useEffect(() => {
-  gsap.from(".skill-category", {
-    y: 80,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
+      gsap.utils.toArray(".section-reveal").forEach((section) => {
+        gsap.fromTo(
+          section,
+          { y: 80, autoAlpha: 0 },
+          {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 78%",
+              toggleActions: "play none none none"
+            }
+          }
+        );
+      });
 
-    scrollTrigger: {
-      trigger: "#skills",
-      start: "top 70%",
-      toggleActions: "play none none reverse"
-    }
-  });
-}, []);
+      gsap.fromTo(
+        ".skill-category",
+        { y: 80, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.85,
+          ease: "power3.out",
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: "#skills",
+            start: "top 72%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+
+      gsap.fromTo(
+        ".project-card",
+        { y: 80, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.85,
+          ease: "power3.out",
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: "#projects",
+            start: "top 72%",
+            toggleActions: "play none none none"
+          }
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   const projectsData = [
     {
@@ -114,14 +174,14 @@ useEffect(() => {
       <Navbar />
       <div className="slides">
         <div id="home">
-          <div className="profile">
+          <div className="profile scroll-reveal">
             <img
               id="profile-pic"
               src="./profile-pic.png"
               alt="profile picture"
             />
           </div>
-          <div className="intro">
+          <div className="intro scroll-reveal">
             <h2>Hey There,</h2>
             <h1>I’m Gaurav Gautam (FallenSid)</h1>
             <h1>
@@ -155,7 +215,7 @@ useEffect(() => {
 
         </div>
         <div className="" id="about">
-          <div className="section about-container page">
+          <div className="section about-container page section-reveal">
             <div className="about-text">
               <h1 className="heading-line" >About Me</h1>
               <div className="heading">
@@ -356,7 +416,7 @@ useEffect(() => {
         </div>
 
         <div id="skills">
-          <h1 className="heading-line">Skills</h1>
+          <h1 className="heading-line section-reveal">Skills</h1>
 
           <div className="skills-container page">
             {skills.map((category) => (
@@ -376,7 +436,7 @@ useEffect(() => {
         </div>
 
         <div id="projects">
-          <h1 className="heading-line">Projects</h1>
+          <h1 className="heading-line section-reveal">Projects</h1>
           <div className="section projects-container page">
             {projectsData.map((project) => (
               <div className="project-card" id={project.id} key={project.id}>
@@ -410,26 +470,38 @@ useEffect(() => {
           </div>
         </div>
         <div id="contact">
-          <div className="section contact-container page">
+          <div className="section contact-container page section-reveal">
             <div className="main-contact">
               <h1 id="Contact-heading" className="heading-line" >Contact</h1>
-              <h4>GET IN TOUCH</h4> <br />
-              <h2>Let's Work Together</h2> <br />
+              <h4>GET IN TOUCH</h4>
+              <h2>Let's Work Together</h2>
               <p>Have a project in mind or just want to say hey?</p>
               <p>Feel free to reach out. I usually reply within a few hours.</p>
-              <br />
+
+              <div className="contact-details">
+                <div className="contact-detail">
+                  <Mail size={20} />
+                  <span>gauravgautam61259@gmail.com</span>
+                </div>
+                <div className="contact-detail">
+                  <Phone size={20} />
+                  <span>Available for freelance work</span>
+                </div>
+                <div className="contact-detail">
+                  <MapPin size={20} />
+                  <span>India</span>
+                </div>
+              </div>
 
               <div className="contact-button">
                 <div className="whatsapp contact-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">
-                    <path d="M 15 3 C 8.373 3 3 8.373 3 15 C 3 17.251208 3.6323415 19.350068 4.7109375 21.150391 L 3.1074219 27 L 9.0820312 25.431641 C 10.829354 26.425062 12.84649 27 15 27 C 21.627 27 27 21.627 27 15 C 27 8.373 21.627 3 15 3 z M 10.892578 9.4023438 C 11.087578 9.4023438 11.287937 9.4011562 11.460938 9.4101562 C 11.674938 9.4151563 11.907859 9.4308281 12.130859 9.9238281 C 12.395859 10.509828 12.972875 11.979906 13.046875 12.128906 C 13.120875 12.277906 13.173313 12.453437 13.070312 12.648438 C 12.972312 12.848437 12.921344 12.969484 12.777344 13.146484 C 12.628344 13.318484 12.465078 13.532109 12.330078 13.662109 C 12.181078 13.811109 12.027219 13.974484 12.199219 14.271484 C 12.371219 14.568484 12.968563 15.542125 13.851562 16.328125 C 14.986562 17.342125 15.944188 17.653734 16.242188 17.802734 C 16.540187 17.951734 16.712766 17.928516 16.884766 17.728516 C 17.061766 17.533516 17.628125 16.864406 17.828125 16.566406 C 18.023125 16.268406 18.222188 16.319969 18.492188 16.417969 C 18.766188 16.515969 20.227391 17.235766 20.525391 17.384766 C 20.823391 17.533766 21.01875 17.607516 21.09375 17.728516 C 21.17075 17.853516 21.170828 18.448578 20.923828 19.142578 C 20.676828 19.835578 19.463922 20.505734 18.919922 20.552734 C 18.370922 20.603734 17.858562 20.7995 15.351562 19.8125 C 12.327563 18.6215 10.420484 15.524219 10.271484 15.324219 C 10.122484 15.129219 9.0605469 13.713906 9.0605469 12.253906 C 9.0605469 10.788906 9.8286563 10.071437 10.097656 9.7734375 C 10.371656 9.4754375 10.692578 9.4023438 10.892578 9.4023438 z"></path>
-                  </svg>
+                  <MessageCircle size={22} />
                   <a href="https://wa.me/918081964829?text=Hi%20Gaurav,%20I%20saw%20your%20portfolio%20and%20want%20a%20website">
                     Chat on WhatsApp
                   </a>
                 </div>
                 <div className="email contact-link">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>
+                  <Mail size={22} />
                   <a href="mailto:gauravgautam61259@gmail.com">Send Email</a>
                 </div>
               </div>

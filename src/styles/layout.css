@@ -1,0 +1,48 @@
+.page {
+  width: var(--section-width);
+  min-height: auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  scroll-margin-top: 70px;
+  padding: 70px 0;
+}
+
+.about-container,
+.contact-container {
+  min-height: calc(100vh - 140px);
+}
+
+.heading-line {
+  min-height: auto;
+  padding-left: 50px;
+  padding-top: 0;
+  margin-bottom: 35px;
+  font-size: 3rem;
+}
+
+.page h1 {
+  text-align: start;
+  text-shadow: 0 0 10px var(--white);
+  font-size: 3rem;
+  margin-left: -40px;
+  margin-bottom: 30px;
+}
+
+.page h2 {
+  color: var(--primary);
+  font-size: 2rem;
+}

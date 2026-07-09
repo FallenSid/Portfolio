@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser';
-import './contactus.css'
+import { Send } from 'lucide-react';
 
 const ContactUs = () => {
 
@@ -31,8 +31,13 @@ const ContactUs = () => {
     return (
         <div className="form-contact">
             <div className="contact-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="white" stroke=" rgb(0, 40, 216)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-icon lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
-                <h3>Send a Message</h3>
+                <span className="contact-title-icon">
+                    <Send size={22} />
+                </span>
+                <div>
+                    <h3>Send a Message</h3>
+                    <p>Tell me what you want to build.</p>
+                </div>
             </div>
             <form ref={form} onSubmit={sendEmail}>
                 
