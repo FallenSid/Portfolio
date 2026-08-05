@@ -85,6 +85,28 @@ function App() {
 
   const projectsData = [
     {
+      id: "creatrix-card",
+      title: "Landing page for Creatrix",
+      desc: "A modern landing page for a start up to display their progress and improve online visiblity.",
+      imgSrc: "./creatrix.png",
+      tools: ["NextJs", "Tailwind CSS", "Framer motion"],
+      colorClass: "creatrix-color",
+      liveLink: "https://creatrix106.vercel.app/",
+      gitLink: "https://github.com/FallenSid/Creatrix",
+      icon: "💻"
+    },
+    {
+      id: "ashvathha-card",
+      title: "Ashvathha Web Novel Website",
+      desc: "A modern web platform designed to showcase the Ashvatha web novel with an organized structure for volumes and characters.",
+      imgSrc: "./ashvatha.png",
+      tools: ["NextJs", "Tailwind CSS", "Framer motion"],
+      colorClass: "ashva-color",
+      liveLink: "https://the-ashvathha.vercel.app/",
+      gitLink: "https://github.com/FallenSid/The-Ashvatha",
+      icon: "⚔️"
+    },
+    {
       id: "gym-card",
       title: "Apex Gym & Fitness Website Template",
       desc: "A sleek and high-performance website template, specifically designed to showcase gym facilities, programs, testimonials, plans and contacts.",
@@ -107,17 +129,7 @@ function App() {
       gitLink: "https://github.com/FallenSid/Portfolio",
       icon: "💻"
     },
-    {
-      id: "ashvathha-card",
-      title: "Ashvathha Web Novel Website",
-      desc: "A modern web platform designed to showcase the Ashvatha web novel with an organized structure for volumes and characters.",
-      imgSrc: "./ashvatha.jpg",
-      tools: ["React", "CSS", "Js"],
-      colorClass: "ashva-color",
-      liveLink: "https://the-ashvathha.vercel.app/",
-      gitLink: "https://github.com/FallenSid/Ashvatha-NodeJs-",
-      icon: "⚔️"
-    },
+    
     {
       id: "herbodent-card",
       title: "Website for Herbal Toothpaste recommendation",

@@ -16,6 +16,8 @@
   background: var(--white);
   box-shadow: var(--shadow-sm);
   transition: 0.3s;
+
+  border: 1px solid rgba(0, 0, 0, 0.174);
 }
 
 .skill-category:hover {

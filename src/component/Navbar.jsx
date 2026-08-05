@@ -5,7 +5,7 @@ const Navbar = () => {
       <div className="logo">
         <svg width="24px" height="24px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1H5L8 3H13V5H3.7457L2.03141 11H4.11144L5.2543 7H16L14 14H0V1Z" fill="rgb(40, 79, 255)"></path></svg>
         <p>
-            Portfolio
+            Gaurav Gautam
         </p>
       </div>
         

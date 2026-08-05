@@ -20,6 +20,8 @@
   padding: 14px;
   overflow: hidden;
   border-radius: var(--radius-xl);
+  border: 2px solid rgba(73, 73, 73, 0.285);
+
   background-color: var(--white);
   box-shadow: var(--shadow-strong);
   transition: 0.4s;
@@ -108,13 +110,14 @@
 }
 
 .port-color {
-  background-color: var(--primary-soft);
-  color: rgb(0, 32, 175);
+  background-color: var(--primary-dark);
+  color: var(--white);
 }
 
 .ashva-color {
-  background-color: rgba(128, 128, 128, 0.5);
-  color: var(--white);
+  background-color: rgb(0, 0, 0);
+  /* color: var(--white); */
+  color: red;
 }
 
 .herbo-color {
@@ -123,7 +126,7 @@
 }
 
 #gym-card .tool {
-  background-color: rgba(58, 58, 58, 0.888);
+  background-color: black;
   color: gold;
 }
 
